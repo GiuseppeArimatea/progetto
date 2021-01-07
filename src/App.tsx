@@ -15,18 +15,18 @@ export const App: FC = (): JSX.Element => {
   const fetchURL = "https://jsonplaceholder.typicode.com/todos";
   const getData = () => fetch(fetchURL).then((res) => res.json());
 
-  useEffect(() => {
+  const onSubmit = () => {
     getData().then((data) => setResult(data));
-  }, []);
+  };
 
   return (
     <>
       <Header />
+      <p>Api Fetch</p>
+      <button onClick={onSubmit}>Clicca</button>
       <div>
-        {result?.map((item) => (
-          <li key={item.id}>
-            {item.title},{item.userId}
-          </li>
+        {result.splice(0, 10).map((item) => (
+          <li key={item.id}>{item.title}</li>
         ))}
       </div>
     </>
