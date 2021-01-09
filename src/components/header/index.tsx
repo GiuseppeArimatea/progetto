@@ -22,13 +22,13 @@ export const Header: FC = (): JSX.Element => {
     <Outer>
       <h2>Giuseppe Arimatea</h2>
       <InnerBox>
-        <li>Home</li>
+        <li>Prova</li>
         <UISpacing marginRight="30px" />
-        <li>Servizi</li>
+        <li>Prova</li>
         <UISpacing marginRight="30px" />
-        <li>Skill</li>
+        <li>Prova</li>
         <UISpacing marginRight="30px" />
-        <li>Contattami</li>
+        <li>Prova</li>
         <UISpacing marginRight="30px" />
       </InnerBox>
     </Outer>
