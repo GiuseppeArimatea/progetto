@@ -2,9 +2,9 @@ import { FC, memo } from "react";
 import styled from "styled-components";
 
 interface Props {
-  marginRight?: string;
+  marginRight: string;
 }
-export const InnerBox = styled.div<Props>`
+export const Inner = styled.div<Props>`
   display: flex;
   flex-direction: row;
   ${({ marginRight }: Props): string | undefined | false =>
@@ -13,7 +13,7 @@ export const InnerBox = styled.div<Props>`
 
 export const UISpacing: FC<Props> = memo(
   ({ marginRight }: Props): JSX.Element | null => {
-    return <InnerBox marginRight={marginRight} />;
+    return <Inner marginRight={marginRight} />;
   }
 );
 

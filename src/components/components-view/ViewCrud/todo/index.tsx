@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { add } from "../../../redux/reducers/todoSlice";
+import { add } from "../../../../redux/reducers/todoSlice";
+import { UIButton } from "../../../components-ui/Button";
+import { TodoList } from "../todolist";
 
 export const Todo: FC = (): JSX.Element => {
   const [todoTxt, setTodoTxt] = useState("");
@@ -13,14 +15,14 @@ export const Todo: FC = (): JSX.Element => {
         value={todoTxt}
         onChange={(event) => setTodoTxt(event.target.value)}
       />
-      <button
+      <UIButton
+        text="Invia"
         onClick={() => {
           dispatch(add({ txt: todoTxt, id: Date.now().toString() }));
           setTodoTxt("");
         }}
-      >
-        Clicca
-      </button>
+      />
+      <TodoList />
     </div>
   );
 };
