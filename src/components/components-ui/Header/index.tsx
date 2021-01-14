@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { UISpacing } from "../Spacing";
-import { BrowserRouter, Link, NavLink, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 export const Outer = styled.div`
   background-color: #00000070;
   height: 3rem;
@@ -21,21 +21,21 @@ export const Header: FC = (): JSX.Element => (
   <Outer>
     <h2>Giuseppe Arimatea</h2>
     <InnerBox>
-      <NavLink to="/">
+      <Link to="/">
         <li>Home</li>
-      </NavLink>
+      </Link>
       <UISpacing marginRight="30px" />
-      <NavLink to="/Counter">
+      <Link to="/Counter">
         <li>Counter</li>
-      </NavLink>
+      </Link>
       <UISpacing marginRight="30px" />
-      <NavLink to="/Todo">
+      <Link to="/Todo">
         <li>Todo</li>
-      </NavLink>
+      </Link>
       <UISpacing marginRight="30px" />
-      <NavLink to="/Fetch">
+      <Link to="/Fetch">
         <li>Fetch</li>
-      </NavLink>
+      </Link>
     </InnerBox>
   </Outer>
 );

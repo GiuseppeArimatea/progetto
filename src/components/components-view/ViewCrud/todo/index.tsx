@@ -18,7 +18,7 @@ export const Todo: FC = (): JSX.Element => {
       <UIButton
         text="Invia"
         onClick={() => {
-          dispatch(add({ txt: todoTxt, id: Date.now().toString() }));
+          dispatch(add({ txt: todoTxt, id: Math.random() }));
           setTodoTxt("");
         }}
       />

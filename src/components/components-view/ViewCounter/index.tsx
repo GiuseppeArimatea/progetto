@@ -4,14 +4,23 @@ import { UIButton } from "../../components-ui/Button";
 export const Counter: FC = (): JSX.Element => {
   const [counter, setCounter] = useState(0);
 
-  const setOnClick = () => {
+  const setAddOnClick = () => {
     setCounter(counter + 1);
+  };
+
+  const setDecreaseOnClick = () => {
+    setCounter(counter - 1);
   };
 
   return (
     <>
-      <UIButton text="clicca" onClick={setOnClick} />
+      <UIButton text="aumenta" onClick={setAddOnClick} />
       <p>{counter}</p>
+      <UIButton
+        isDisabled={false ? counter : counter < 1}
+        text="diminuisci"
+        onClick={setDecreaseOnClick}
+      />
     </>
   );
 };
